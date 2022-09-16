@@ -6,5 +6,5 @@ app.get("/", (_red, res) => {
 });
 
 app.listen(4000, () => {
-  console.l("http://localhost:4000");
+  console.lg("hell");
 });
