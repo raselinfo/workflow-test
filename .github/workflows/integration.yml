@@ -15,10 +15,6 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-      - name: Nod Commend
-        run: |
-          console.log(" is console log")
-          console.log(" is console log again")
 
   run-windows-commend:
     runs-on: windows-latest
