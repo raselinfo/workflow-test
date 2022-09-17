@@ -1,14 +1,14 @@
-name: Shell Commends
-
+name: Shell Commend
 on:
   - push
 jobs:
   run-shell-commend:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a sting
-        run: eho "Hello World!"
-      - name: multiline script
+      - name: Print a string
+        run: echo "hello world"
+      - name: Multiline Commend
         run: |
           node -v
           npm -v
+
