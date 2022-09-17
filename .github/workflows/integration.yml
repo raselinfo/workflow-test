@@ -1,4 +1,4 @@
-name: Shell Commend
+name: Commend
 on: [push]
 jobs:
   run-shell-commend:
@@ -10,21 +10,24 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: python Commend
+      - name: Python Commend
         run: |
           import platform
           print(platform.processor())
         shell: python
-
+      - name: Nod Commend
+        run: |
+          console.log("This is console log")
+          console.log("This is console log again")
+        shell: node
 
   run-windows-commend:
     runs-on: windows-latest
-    needs: [ run-shell-commend] # "run-windows-commend" will run when "run-shell-commend" Finished
+    needs: [run-shell-commend]
     steps:
       - name: Directory PowerShell
         run: pwd
+        shell: powershell
       - name: Directory Bash
         run: pwd
         shell: bash
-
-      
