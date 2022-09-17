@@ -1,4 +1,4 @@
-name: Commend
+name: Integration Workflow
 on: [push]
 jobs:
   run-shell-commend:
