@@ -8,8 +8,7 @@ jobs:
       - run: |
           node -v
           npm -v
-          touch index.css
-        shell: powershell
+
       - name: python Commend
         run: |
           import platform
