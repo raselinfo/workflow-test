@@ -9,3 +9,8 @@ jobs:
           node -v
           npm -v
           touch index.css
+      - name: python Commend
+        run: |
+          import platform
+          print
+          (platform.processor())
