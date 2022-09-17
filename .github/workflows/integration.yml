@@ -8,6 +8,8 @@ jobs:
         run: |
           pwd
           ls
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
       - name: Print a string
         run: echo "hello world"
       - name: Multiline Commend
