@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a sting
-        run: echo "Hello World!"
+        run: eho "Hello World!"
       - name: multiline script
         run: |
           node -v
