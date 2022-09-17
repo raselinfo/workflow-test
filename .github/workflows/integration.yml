@@ -19,7 +19,6 @@ jobs:
         run: |
           console.log("This is console log")
           console.log("This is console log again")
-        shell: node
 
   run-windows-commend:
     runs-on: windows-latest
