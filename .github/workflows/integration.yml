@@ -19,6 +19,7 @@ jobs:
 
   run-windows-commend:
     runs-on: windows-latest
+    needs: [ run-shell-commend] # "run-windows-commend" will run when "run-shell-commend" Finished
     steps:
       - name: Directory PowerShell
         run: pwd
