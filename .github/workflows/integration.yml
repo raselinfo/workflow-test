@@ -1,14 +1,10 @@
 name: Shell Commend
-on:
-  - push
+on: [push]
 jobs:
-  run-shell-commend:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print a string
-        run: echo "hello world"
-      - name: Multiline Commend
-        run: |
+      - run: echo "hello world"
+      - run: |
           node -v
           npm -v
-
