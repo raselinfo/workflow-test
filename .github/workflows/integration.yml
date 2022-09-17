@@ -1,16 +1,29 @@
 name: Shell Commend
 on: [push]
 jobs:
-  build:
+  run-shell-commend:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello world"
-      - run: |
+      - name: Print a string
+        run: echo "hello world"
+      - name: Multiline Commend
+        run: |
           node -v
           npm -v
-
       - name: python Commend
         run: |
           import platform
           print(platform.processor())
         shell: python
+
+
+  run-windows-commend:
+    runs-on: windows-latest
+    steps:
+      - name: Directory PowerShell
+        run: pwd
+      - name: Directory Bash
+        run: pwd
+        shell: bash
+
+      
