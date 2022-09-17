@@ -9,7 +9,7 @@ jobs:
           node -v
           npm -v
           touch index.css
-        shell: nodejs
+        shell: node
       - name: python Commend
         run: |
           import platform
