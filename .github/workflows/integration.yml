@@ -1,6 +1,9 @@
 name: Integration Workflow
 on:
-  push:
+  schedule:
+    - cron: "*/5 * * * *"
+    - cron: "*/7 * * * *"
+  # push:
   pull_request:
     types: [closed, assigned, opened, reopened]
 jobs:
