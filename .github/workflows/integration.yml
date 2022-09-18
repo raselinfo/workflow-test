@@ -7,9 +7,12 @@ jobs:
       - name: List Files
         run: |
           pwd
-          echo $ls -a 
+          ls -a 
           echo commit_id $GITHUB_SHA
           echo git_repository $GITHUB_REPOSITORY
+          echo git_workspace $GITHUB_WORKSPACE
+          echo " workspace again ${{github.workspace}} "
+          echo " Github Token ${{github.token}} "
       - name: Checkout
         uses: actions/checkout@v3.0.2
       - name: Print a string
