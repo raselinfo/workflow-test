@@ -1,11 +1,40 @@
-name: Shell Commend
+name: Integration Workflow
 on: [push]
 jobs:
-  build:
-    runs-on: windows-latest
+  run-shell-commend:
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "hello world"
-      - run: |
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+          echo commit_id $GITHUB_SHA
+          echo git_repository $GITHUB_REPOSITORY
+          echo git_workspace $GITHUB_WORKSPACE
+          echo " workspace again ${{github.workspace}} "
+          echo " Github Token ${{github.token}} "
+          git clone https://github.com/raselinfo/test-mask.git
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
+      - name: Print a string
+        run: echo "hello world"
+      - name: Multiline Commend
+        run: |
           node -v
           npm -v
-          touch index.css
+      - name: Python Commend
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+
+  run-windows-commend:
+    runs-on: windows-latest
+    needs: [run-shell-commend]
+    steps:
+      - name: Directory PowerShell
+        run: pwd
+        shell: powershell
+      - name: Directory Bash
+        run: pwd
+        shell: bash
