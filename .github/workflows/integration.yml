@@ -8,8 +8,8 @@ jobs:
         run: |
           pwd
           ls -a
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
+          echo commit_id $GITHUB_SHA
+          echo git_repository $GITHUB_REPOSITORY
       - name: Checkout
         uses: actions/checkout@v3.0.2
       - name: Print a string
