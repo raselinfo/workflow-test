@@ -7,7 +7,7 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls -a 
+          echo "lists: ${{ls -a}}"
           echo commit_id $GITHUB_SHA
           echo git_repository $GITHUB_REPOSITORY
           echo git_workspace $GITHUB_WORKSPACE
