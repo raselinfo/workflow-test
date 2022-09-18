@@ -7,7 +7,7 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls -a
+          echo $ls -a 
           echo commit_id $GITHUB_SHA
           echo git_repository $GITHUB_REPOSITORY
       - name: Checkout
