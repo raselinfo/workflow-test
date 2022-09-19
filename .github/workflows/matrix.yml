@@ -5,7 +5,7 @@ jobs:
     strategy:
       matrix:
         node_version: [10, 14, 16]
-      fail-fast: true
+      max-parallel: 2
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node version
