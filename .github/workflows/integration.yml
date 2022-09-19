@@ -1,8 +1,9 @@
 name: Integration Workflow
 on:
   push:
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+    branches:
+      - main
+
 jobs:
   run-shell-commend:
     runs-on: ubuntu-latest
