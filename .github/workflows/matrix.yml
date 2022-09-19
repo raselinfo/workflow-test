@@ -14,7 +14,6 @@ jobs:
             node-version: 10
           - os: macos-latest
             node_version: 16
-      max-parallel: 2
     runs-on: ${{matrix.os}}
     steps:
       - name: Setup Node version
