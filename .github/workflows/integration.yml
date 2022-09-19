@@ -1,11 +1,9 @@
 name: Integration Workflow
 on:
-  schedule:
-    - cron: "*/15 * * * *"
-    # - cron: "0/10 * * * *"
-  # push:
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  push:
+    branches:
+      - main
+
 jobs:
   run-shell-commend:
     runs-on: ubuntu-latest
