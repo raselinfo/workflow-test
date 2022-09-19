@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+      - 'features/*'
+      - 'features/**'
 
 jobs:
   run-shell-commend:
