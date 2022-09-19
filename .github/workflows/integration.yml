@@ -13,6 +13,7 @@ on:
 jobs:
   run-shell-commend:
     runs-on: ubuntu-latest
+
     steps:
       - name: List Files
         run: |
@@ -24,10 +25,13 @@ jobs:
           echo " workspace again ${{github.workspace}} "
           echo " Github Token ${{github.token}} "
           git clone https://github.com/raselinfo/test-mask.git
+        timeout-minutes: 360
       - name: Checkout
+        if: failure()
         uses: actions/checkout@v3.0.2
       - name: Print a string
         run: echo "hello world"
+        continue-on-error: true
       - name: Multiline Commend
         run: |
           node -v
