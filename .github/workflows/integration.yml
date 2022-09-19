@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - main
+      - "features/*"
+      - "features/**"
+    tags:
+      - v1.*
+    paths:
+      - "**.js"
 
 jobs:
   run-shell-commend:
