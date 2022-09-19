@@ -1,0 +1,16 @@
+name: Matrix
+on: [push]
+jobs:
+  node-version:
+    strategy:
+      matrix:
+        node_version: [10, 14, 16]
+      max-parallel: 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{matrix.node_version}}"
+      - name: Log node version
+        run: node -v
