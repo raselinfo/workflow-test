@@ -6,5 +6,5 @@ app.get("/", (_red, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("hello worldsf!");
+  console.log("hello world!");
 });
