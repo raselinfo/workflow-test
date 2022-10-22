@@ -24,3 +24,6 @@ jobs:
 
       - name: Install Backend Dependance
         run: ls && cd backend && ls && yarn install --frozen-lockfile && ls
+
+      - name: Run ES-Lint
+        run: cd backend && yarn lint
