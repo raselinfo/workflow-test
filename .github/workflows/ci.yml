@@ -11,11 +11,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2.5.0
 
-      - name: Current Directory ✅
-        run: pwd && ls && cd frontend && ls && yarn install --frozen-lockfile
+      - name: Install Frontend Dependance✅
+        run: pwd && ls && cd frontend && ls && yarn install --frozen-lockfile && ls
 
-      - name: Change Directory
-        run: cd frontend && ls
+  backend:
+    name: Backend Code
+    runs-on: ubuntu-latest
 
-      - name: Last Directory 🕐
-        run: pwd && ls && cd backend && ls
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2.5.0
+
+      - name: Install Backend Dependance
+        run: ls && cd backend && ls && yarn install --frozen-lockfile && ls
