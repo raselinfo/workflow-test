@@ -36,3 +36,11 @@ jobs:
 
       - name: Run ES-Lint
         run: cd backend && yarn lint
+
+      - name: Check All
+        run: |
+          ls 
+          cd frontend
+          ls
+          cd backend 
+          ls
