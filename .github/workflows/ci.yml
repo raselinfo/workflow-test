@@ -1,0 +1,24 @@
+name: CI
+on:
+  - pull_request
+  - push
+jobs:
+  frontend:
+    name: Frontend Code
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2.5.0
+
+      - name: Current Directory ✅
+        run: pwd
+
+      - name: Change Directory
+        run: cd frontend
+
+      # - name: Install packages
+      #   run: npm ci
+
+      - name: Last Directory 🕐
+        run: pwd
