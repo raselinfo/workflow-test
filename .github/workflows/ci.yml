@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2.5.0
+      # - name: Checkout Code
+      #   uses: actions/checkout@v2.5.0
 
       - name: Install Backend Dependance
         run: ls && cd backend && ls && yarn install --frozen-lockfile && ls
