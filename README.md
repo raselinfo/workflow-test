@@ -1,0 +1,41 @@
+```bash
+name: CI
+on:
+  - pull_request
+  - push
+jobs:
+  frontend:
+    name: Frontend Code
+    runs-on: ubuntu-latest
+    needs: backend
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2.5.0
+
+      - name: Install Frontend Dependance✅
+        # run: pwd && ls && cd frontend && ls && yarn install --frozen-lockfile && ls
+        run: |
+          pwd
+          ls
+          cd frontend
+          ls
+          yarn install --frozen-lockfile
+          ls
+
+      - name: Run ES-Lint
+        run: cd frontend && yarn lint
+
+  backend:
+    name: Backend Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2.5.0
+
+      - name: Install Backend Dependance
+        run: ls && cd backend && ls && yarn install --frozen-lockfile && ls
+
+      - name: Run ES-Lint
+        run: cd backend && yarn lint
+
+```
