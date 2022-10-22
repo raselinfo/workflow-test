@@ -1,3 +1,4 @@
+```bash
 name: CI
 on:
   - pull_request
@@ -36,3 +37,5 @@ jobs:
 
       - name: Run ES-Lint
         run: cd backend && yarn lint
+
+```
