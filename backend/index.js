@@ -4,7 +4,7 @@ const app = express();
 
 const name = 'Rasel';
 app.get('/', (_req, res) => {
-    return "hello"
+  return 'hello';
 });
 console.log('ba');
 
