@@ -11,11 +11,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2.5.0
 
-      - name: Lists ✅
-        run: ls
-
       - name: Current Directory ✅
-        run: pwd
+        run: \ pwd
+          ls
          
 
       - name: Change Directory
