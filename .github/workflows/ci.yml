@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2.5.0
 
       - name: Current Directory ✅
-        run: pwd && ls && cd frontend && ls && npm ci
+        run: pwd && ls && cd frontend && ls && yarn install --frozen-lockfile
 
       - name: Change Directory
         run: cd frontend
