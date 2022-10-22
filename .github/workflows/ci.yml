@@ -13,6 +13,9 @@ jobs:
 
       - name: Install Frontend Dependance✅
         run: pwd && ls && cd frontend && ls && yarn install --frozen-lockfile && ls
+      
+      - name: Run ES-Lint
+        run : cd frontend && yarn lint
 
   backend:
     name: Backend Code
