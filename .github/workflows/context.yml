@@ -1,9 +1,0 @@
-name: Context
-on: [push]
-jobs:
-  context_jobs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump job context
-        if: failure()
-        
