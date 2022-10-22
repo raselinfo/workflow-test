@@ -15,7 +15,7 @@ jobs:
         run: pwd && ls && cd frontend && ls && yarn install --frozen-lockfile
 
       - name: Change Directory
-        run: cd frontend
+        run: cd frontend && ls
 
       - name: Last Directory 🕐
         run: pwd && ls && cd backend && ls
